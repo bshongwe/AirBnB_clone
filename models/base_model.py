@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """BaseModel class module for AirBnB clone console"""
 import models
-form uuid import uuid4
+from uuid import uuid4
 from datetime import datetime
 
 
@@ -28,20 +28,20 @@ class BaseModel:
         else:
             models.storage.new(self)
 
-        def save(self):
-            """Using updated_at to update current datetime"""
-            self.updated_at = datetime.today()
-            models.storage.save()
+    def save(self):
+        """Using updated_at to update current datetime"""
+        self.updated_at = datetime.today()
+        models.storage.save()
 
-        def to_dict(self):
-            """Returns BaseModel dict key/ value pair"""
-            mydict = self.__dict__.copy()
-            mydict["created_at"] = self.created_at.isoformat()
-            mydict["updated_at"] = self.updated_at.isoformat()
-            mydict["__class__"] = self.__class__.__name__
-            return mydict
+    def to_dict(self):
+        """Returns BaseModel dict key/ value pair"""
+        mydict = self.__dict__.copy()
+        mydict["created_at"] = self.created_at.isoformat()
+        mydict["updated_at"] = self.updated_at.isoformat()
+        mydict["__class__"] = self.__class__.__name__
+        return mydict
 
-        def __str__(self):
-            """Returns BaseModel instance as string"""
-            clname = self.__class__.__name__
-            return "[{}] ({} {}".format(clname, self.id, self.__dict__)
+    def __str__(self):
+        """Returns BaseModel instance as string"""
+        clname = self.__class__.__name__
+        return f"[{clname}] ({self.id}) {self.__dict__}"
