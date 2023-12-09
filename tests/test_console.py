@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 class TestHBNBCommand_prompting(unittest.TestCase):
     """Unittests for testing prompting of HBNB command interpreter"""
-    
+
     def test_prompt_string(self):
         """Verifies HBNBCommand class prompt attribute is equal to string"""
         self.assertEqual("(hbnb) ", HBNBCommand.prompt)
@@ -23,6 +23,7 @@ class TestHBNBCommand_prompting(unittest.TestCase):
             """Mocks sys.stdout object to check onecmd with empty string"""
             self.assertFalse(HBNBCommand().onecmd(""))
             self.assertEqual("", output.getvalue().strip())
+
 
 class TestHBNBCommand_help(unittest.TestCase):
     """Unittests for testing help messages of the HBNB command interpreter."""
