@@ -1,4 +1,4 @@
 # 0x01. AirBnB clone - Web static
 
-We will add the other images using SFTP
 
+Task 9 - close of day (14 Dec)
