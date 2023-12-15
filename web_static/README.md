@@ -1,7 +1,7 @@
 # 0x01. AirBnB clone - Web static
 
 
-<img src="web_static/AirBnb-clone_WebFramework-html.png" />
+<img src="AirBnb-clone_WebFramework-html.png" />
 
 ## Web static, what?
 Now that you have a command interpreter for managing your AirBnB objects, it’s time to make them alive!
